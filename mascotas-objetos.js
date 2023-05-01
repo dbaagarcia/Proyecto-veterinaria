@@ -4,8 +4,8 @@ let mascotas = [
         nombreMascota: "Luna",
         nombreDueño: "Juan",
         cedulaDueño: "12345678",
-        edadMascota: "3",
-        telefonoDueño: "555-1234",
+        edadMascota: "3 años",
+        telefonoDueño: "3125010308",
         especialidad: "Medicina general",
         medico: "Pepito"
     },
@@ -13,8 +13,8 @@ let mascotas = [
         nombreMascota: "Max",
         nombreDueño: "María",
         cedulaDueño: "87654321",
-        edadMascota: "5",
-        telefonoDueño: "555-5678",
+        edadMascota: "5 años",
+        telefonoDueño: "3012345678",
         especialidad: "Cirugía veterinaria",
         medico: "Carlos"
     },
@@ -22,8 +22,8 @@ let mascotas = [
         nombreMascota: "Pelusa",
         nombreDueño: "Pedro",
         cedulaDueño: "24681357",
-        edadMascota: "2",
-        telefonoDueño: "555-2468",
+        edadMascota: "2 meses",
+        telefonoDueño: "3159876543",
         especialidad: "Dermatología veterinaria",
         medico: "Juana"
     }
