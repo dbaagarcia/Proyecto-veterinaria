@@ -15,7 +15,7 @@ formularioMascota.addEventListener('submit', (event) => {
         window.location.href = 'mascotas.html';
     } else {
         console.log('Continuando en el formulario');
-        formularioMedico.reset()
+        formularioMascota.reset()
     }
 });
 // Función para guardar una mascota en la cookie
