@@ -12,9 +12,9 @@ class Mascota {
   }
   
   // Creamos objetos de la clase Mascota que representan cada mascota
-  let mascota1 = new Mascota("Luna", "Juan", "12345678", "3", "555-1234", "Medicina general", "Pepito");
+  let mascota1 = new Mascota("Luna", "Juan", "12345678", "3 años", "3125010308", "Medicina general", "Pepito");
   
-  let mascota2 = new Mascota("Max", "María", "87654321", "5", "555-5678", "Cirugía veterinaria","Carlos");
+  let mascota2 = new Mascota("Max", "María", "87654321", "5 años", "3155010478", "Cirugía veterinaria","Carlos");
   
   // Obtenemos la referencia de la tabla
   let tablaMascotas = document.getElementById("tabla-mascotas");
