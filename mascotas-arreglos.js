@@ -2,8 +2,8 @@
 let nombresMascotas = ["Luna", "Max", "Pelusa"];
 let nombresDueños = ["Juan", "María", "Pedro"];
 let cedulasDueños = ["12345678", "87654321", "24681357"];
-let edadesMascotas = ["3", "5", "2"];
-let telefonosDueños = ["555-1234", "555-5678", "555-2468"];
+let edadesMascotas = ["3 años", "5 años", "2 meses"];
+let telefonosDueños = ["3125010308", "3012345678", "3159876543"];
 let especialidades = ["Medicina general", "Cirugía veterinaria", "Dermatología veterinaria"];
 let nombreDoctor = ["Pepito","Carlos","Juana"]
 
