@@ -3,8 +3,8 @@
       "nombreMascota": "Fido",
       "nombreDueño": "Juan Pérez",
       "cedulaDueño": "1234567",
-      "edadMascota": "3",
-      "telefonoDueño": "555-5555",
+      "edadMascota": "3 años",
+      "telefonoDueño": "3125007809",
       "especialidad": "Medicina general",
       "medico": "Pepito"
     },
@@ -12,8 +12,8 @@
       "nombreMascota": "Luna",
       "nombreDueño": "María Rodríguez",
       "cedulaDueño": "9876543",
-      "edadMascota": "5",
-      "telefonoDueño": "555-4444",
+      "edadMascota": "5 años",
+      "telefonoDueño": "3012345678",
       "especialidad": "Dermatología veterinaria",
       "medico": "Carlos"
     }
