@@ -1,6 +1,6 @@
 //cargar los datos de la cookie
 const mascotasCookie = JSON.parse(getCookie('mascotas'));
-const medicosCookie = JSON.parse(getCookie('medicos'));
+const medicosCookie = JSON.parse(getCookie('medicos') || "[]");
 const tablaMascotas = document.getElementById("tabla-mascotas");
 const cuerpoTabla = tablaMascotas.getElementsByTagName("tbody")[0];
 mascotasCookie.forEach(mascota => {
@@ -17,13 +17,11 @@ mascotasCookie.forEach(mascota => {
     telefonoDueño.textContent = mascota.telefonoDueño;
     const especialidad = fila.insertCell();
     especialidad.textContent = mascota.especialidad;
-    medicosCookie.forEach(medico => {
-        if (medico.especialidad == mascota.especialidad) {
-            console.log(medico.especialidad)
-            const medicoMascota = fila.insertCell();
-            medicoMascota.textContent = medico.nombreMedico;
-        }
-    })
+    //colocar el medico que va a tratar la mascota
+    //mediante find encontramos el medico que tenga la especialidad
+    const medicoEspecialidad = medicosCookie.find(medico => medico.especialidad === mascota.especialidad);
+    const medicoMascota = fila.insertCell();
+    medicoMascota.textContent = medicoEspecialidad ? medicoEspecialidad.nombreMedico : "Por asignar";
 });
 
 

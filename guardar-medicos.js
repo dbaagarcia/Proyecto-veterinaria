@@ -8,16 +8,15 @@ formularioMedico.addEventListener('submit', (event) => {
         consultorio: document.getElementById('consultorio').value,
         telefonoMedico: document.getElementById('telefono').value,
         especialidad: document.getElementById('especialidad').value,
+        correo: document.getElementById('correo').value
     };
-    const medicosCookie = JSON.parse(getCookie('medicos'));
-    let validacion = false
-    medicosCookie.forEach(medico => {
-        if (medico.especialidad == datosMedico.especialidad) {
-            validacion = true;
-            return;
-        } 
-    })
-    (validacion) ? alert("Ya existe un medico para esta especialidad"): guardarMedicoEnCookie(datosMedico)
+    const medicosCookie = getCookie('medicos') ? JSON.parse(getCookie('medicos')) : [];
+    const existeMedico = medicosCookie.some(medico => medico.especialidad === datosMedico.especialidad);
+    if (existeMedico) {
+        alert("Ya existe un medico para esta especialidad");
+    } else {
+        guardarMedicoEnCookie(datosMedico);
+    }
     const confirmacion = confirm('¿Desea ver los datos o seguir añadiendo medicos?');
     if (confirmacion) {
         window.location.href = 'medicos.html';
@@ -25,7 +24,6 @@ formularioMedico.addEventListener('submit', (event) => {
         console.log('Continuando en el formulario');
         formularioMedico.reset()
     }
-
 });
 // Función para guardar una medico en la cookie
 function guardarMedicoEnCookie(medico) {
