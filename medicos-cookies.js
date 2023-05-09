@@ -1,13 +1,8 @@
 //cargar los datos de la cookie
 const medicosCookie = JSON.parse(getCookie('medicos'));
-let mascotasCookie = {}
-try {
-    mascotasCookie = JSON.parse(getCookie('mascotas'));
-} catch (error) {
-    console.log("No hay mascotas registradas")
-}
+const mascotasCookie = JSON.parse(getCookie('mascotas') || "[]");
 const tablaMedicos = document.getElementById("tabla-medicos");
-const cuerpoTabla = tablaMedicos.getElementsByTagName("tbody")[0];
+const cuerpoTabla = tablaMedicos.querySelector("tbody");
 medicosCookie.forEach(medico => {
     const fila = cuerpoTabla.insertRow();
     const nombreMedico = fila.insertCell();
@@ -42,18 +37,14 @@ medicosCookie.forEach(medico => {
 
 
 
-// Función para obtener el valor de una cookie
-function getCookie(nombreCookie) {
-    const name = nombreCookie + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const ca = decodedCookie.split(';');
-
-    for (let cookie of ca) {
-        cookie = cookie.trim();
-        if (cookie.startsWith(name)) {
-            return cookie.substring(name.length);
+// Función para obtener los datos de la cookie
+function getCookie(nombre) {
+    const cookies = document.cookie.split("; ");
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].split("=");
+        if (cookie[0] === nombre) {
+            return decodeURIComponent(cookie[1]);
         }
     }
-
     return "";
 }
